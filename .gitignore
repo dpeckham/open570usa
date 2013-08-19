@@ -1,0 +1,3 @@
+config/deploy.rb
+.idea/*
+.bundle/config
