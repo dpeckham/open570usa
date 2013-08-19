@@ -9,7 +9,7 @@
 	<style>
 	.content {max-width: 640px; margin-left: auto; margin-right: auto;}
 	body {text-align: center; font-family: 'Average Sans', sans-serif;}
-	#logo {margin: 50px 0 20px;}
+	#logo {margin: 20px 0;}
 	#fblogo {max-width: 250px; margin: 20px;}
 	#sailplan {max-height: 250px;}
 	ul.docs {list-style-type: none; margin: 0;}
@@ -22,9 +22,9 @@
 	</style>	
 </head>
 <body>
+	<img id="logo" src='images/logo.png'/>
 	<ul id="fleet">
 	</ul>
-	<img id="logo" src='images/logo.png'/>
 	<br/>
 	<div class="content">
 	<h1>Welcome</h1>
@@ -55,13 +55,13 @@
 		var fleet = [169,170,186,187,189,190,200,201,208,209,212,213,214,229,266,273,274,275,276,277,278,279,280,281,286,288,290,296,298,300,305,306,310,315,316,570];
 		while (fleet.length > 0) {
 			var index = Math.floor(Math.random() * fleet.length);
-			console.log(index);
 			$('#fleet').append('<li><img src="images/fleet/USA' + fleet[index] + '.png"/></li>');
 			fleet.splice(index, 1);
 		}
 		$('#fleet').jcarousel({
 	        wrap: 'circular',
-			auto:   2
+			auto:   2,
+			animation: 'slow'
 		});
 	});
 	</script>
